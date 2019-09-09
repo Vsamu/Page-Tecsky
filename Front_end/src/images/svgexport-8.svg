@@ -1,0 +1,26 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
+      <defs>
+        <filter id="blackWash">
+          <feComponentTransfer>
+            <feFuncR slope="0" type="linear"></feFuncR>
+            <feFuncG slope="0" type="linear"></feFuncG>
+            <feFuncB slope="0" type="linear"></feFuncB>
+          </feComponentTransfer>
+        </filter>
+        <filter id="whiteWash">
+          <feComponentTransfer>
+            <feFuncR slope="0" type="linear"></feFuncR>
+            <feFuncG slope="0" type="linear"></feFuncG>
+            <feFuncB slope="0" type="linear"></feFuncB>
+          </feComponentTransfer>
+          <feComponentTransfer>
+            <feFuncR tableValues="1 0" type="table"></feFuncR>
+            <feFuncG tableValues="1 0" type="table"></feFuncG>
+            <feFuncB tableValues="1 0" type="table"></feFuncB>
+          </feComponentTransfer>
+        </filter>
+      </defs>
+
+        <image xlink:href="/images/components/mockups/mock_02.png" width="1300" height="900" y="50" x="30" stroke="none" fill="#000000" stroke-width="1px"></image>
+        <image xlink:href="https://dewey.tailorbrands.com/production/brand_version_mockup_image/540/2209625540_35d86d79-bd37-44dc-8d5b-e99648d336af.png?cb=1567908756" width="400" height="290" x="330" y="430" transform="skewX(3)" stroke="none" fill="#000000" stroke-width="1px"></image>
+<!---->    </svg>
