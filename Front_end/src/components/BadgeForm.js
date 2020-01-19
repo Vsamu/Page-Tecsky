@@ -15,6 +15,9 @@ class BadgeForm extends React.Component {
     //         [e.target.name]: e.target.value,
     //     })        
     // }
+
+    state={};
+ 
     //metodo que realiza eventos, para el button
     handleClick = (e) => {
         console.log(this.state);
@@ -23,10 +26,10 @@ class BadgeForm extends React.Component {
     //previene el onSubmit por default del form
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log("entro mk")
+        console.log("form was stoped")
+        
     }
     
-
     //metodo render
     render() {
         return <div>
@@ -34,22 +37,22 @@ class BadgeForm extends React.Component {
             <form onSubmit={this.handleSubmit}> 
                 <div className="form-group">
                     <label>Primer Nombre</label>
-                    <input onChange={this.props.onChange} className="form-control" type="text" name="PrimerNombre" value={this.props.formValues.PrimerNombre} />    
+                    <input onChange={this.props.onChange} className="form-control" type="text" name="firstName" value={this.props.fromValues.firstName} />    
                 </div>                
 
                 <div className="form-group">
                     <label>Apellido</label>
-                    <input onChange={this.props.onChange} className="form-control" type="text" name="Apellido" value={this.props.formValues.Apellido} />             
+                    <input onChange={this.props.onChange} className="form-control" type="text" name="lastName" value={this.props.fromValues.lastName} />             
                 </div>                
 
                 <div className="form-group">
                     <label>Correo</label>
-                    <input onChange={this.props.onChange} className="form-control" type="email" name="email" value={this.props.formValues.email} />                    
+                    <input onChange={this.props.onChange} className="form-control" type="email" name="Tittle" value={this.props.fromValues.Tittle}/>                    
                 </div>                
 
                 <div className="form-group">
-                    <label>Dirección</label>
-                    <input onChange={this.props.onChange} className="form-control" type="text" name="Insta" value={this.props.formValues.Insta} />                    
+                    <label>Date</label>
+                    <input onChange={this.props.onChange} className="form-control" type="text" name="Date" value={this.props.fromValues.Date}/>                    
                 </div>                
 
                 <button onClick={this.handleClick} className="btn btn-primary">Guardar</button>

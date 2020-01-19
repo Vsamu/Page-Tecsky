@@ -1,13 +1,18 @@
 import React from "react";
 
 import "./styles/BadgeNew.css";
-import Simple from "../components/SimpleNavbar";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
+import confLogo from "../images/badge-header.svg"
 
-import header from "../images/badge-header.svg";
+//import header from "../images/badge-header.svg";
 class NewBadge extends React.Component {
-  state = { form: {} };
+  state = { form: {
+    firstName:'',
+    lastName:'',
+    Tittle:'',
+    Date:''
+  } };
 
   handleChange = e => {
     this.setState({
@@ -16,37 +21,36 @@ class NewBadge extends React.Component {
         [e.target.name]: e.target.value
       }
     });
-  };
+  }; 
 
   render() {
     return (
-      <div>
-        <div>
-          <Simple />
+      <React.Fragment>        
+        <div className="Badges">
+          <div className="Badges__hero">
+            <div className="Badges__container">
+              <img className=".Badges_conf-logo" src={confLogo} alt="Conf logo" />
+            </div>
+          </div>        
         </div>
-        <div className="BadgeNew__hero">
-          <img className="img-fluid" src={header} alt="logo" />
-        </div>
-
         <div className="container">
           <div className="row">
             <div className="col">
-              <Badge
-                FirstName="Jose"
-                LastName="Vela"
-                otro="Ing Electrónico"
-                insta="jvsamudio"
-              />
+              <Badge 
+              firstName={this.state.form.firstName}
+              lastName={this.state.form.lastName} 
+              Tittle={this.state.form.Tittle}
+              Date={this.state.form.Date}
+              footer="Badge" />
             </div>
             <div className="col">
               <BadgeForm
-                onChange={this.handleChange}
-                formValues={this.state.form}
-              />
-            </div>
-          </div>
+              onChange={this.handleChange} 
+              fromValues={this.state.form}/>
+            </div>            
+          </div>          
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
